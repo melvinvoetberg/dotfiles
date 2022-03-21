@@ -1,0 +1,93 @@
+#!/bin/bash
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  echo "Linux detected"
+  apt-get update && apt-get upgrade -y && apt-get install curl git ruby wget
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  echo "MacOS detected"
+
+  xcode-select -p 1> /dev/null
+  if [[ $? != 0 ]]; then
+    xcode-select --install
+  fi
+
+  test -e "${HOME}/.iterm2_shell_integration.zsh"
+  if [[ $? != 0 ]]; then
+    echo "Installing iTerm2 Shell Integration"
+    curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+  fi
+else
+  echo "Unsupported OS, exiting."
+  exit 0
+fi
+
+# Install Homebrew
+which -s brew
+if [[ $? != 0 ]] ; then
+  echo "Installing Homebrew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Install Homebrew Software
+echo "Installing Homebrew Software"
+brew update
+brew upgrade
+brew tap Homebrew/bundle
+brew bundle
+
+# Install OhMyZsh
+if ! [[ -d "$HOME/.oh-my-zsh" ]]; then
+  echo "Installing OhMyZsh"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# Install Zsh theme Powerlevel10k
+if ! [[ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]]; then
+  echo "Installing Zsh theme Powerlevel10k"
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+fi
+
+# Setup symlinks
+echo "Setting up symlinks"
+
+## asdf
+ln -fns "$(pwd)/asdf/.asdfrc" "$HOME/.asdfrc"
+
+## bin
+ln -nfs "$(pwd)/bin" "$HOME/.bin"
+
+## bundle
+mkdir -p "$HOME/.bundle"
+ln -nfs "$(pwd)/bundle/config" "$HOME/.bundle/config"
+
+## Git
+ln -fns "$(pwd)/git/.gitconfig" "$HOME/.gitconfig"
+ln -fns "$(pwd)/git/.gitignore_global" "$HOME/.gitignore_global"
+ln -fns "$(pwd)/git/.gitattributes_global" "$HOME/.gitattributes_global"
+
+## Sublime Text
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  ln -fns "$(pwd)/sublime/Package Control.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Package Control.sublime-settings"
+  ln -fns "$(pwd)/sublime/Preferences.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  ln -fns "$(pwd)/sublime/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings"
+  ln -fns "$(pwd)/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
+fi
+
+## Zsh
+ln -fns "$(pwd)/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+ln -fns "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"
+
+# Setup OS specifics and reboot
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  sh "$(pwd)/os/linux"
+
+  echo "Done, restarting..."
+  sleep 5
+  # sudo shutdown -r now
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  sh "$(pwd)/os/macos"
+
+  echo "Done, restarting..."
+  sleep 5
+  # osascript -e 'tell app "System Events" to restart'
+fi
