@@ -1,0 +1,37 @@
+#!/bin/bash
+
+m1() {
+  local cmdname=$1; shift
+  if type "m1__$cmdname" >/dev/null 2>&1; then
+    "m1__$cmdname" "$@"
+  else
+    echo "m1: command not found: $cmdname" >&2
+  fi
+}
+
+m1__install() {
+  local cmdname=$1; shift
+  if type "m1__install__$cmdname" >/dev/null 2>&1; then
+    "m1__install__$cmdname" "$@"
+  else
+    echo "m1 install: command not found: $cmdname" >&2
+  fi
+}
+
+m1__install__ruby() {
+  LDFLAGS="-L/opt/homebrew/opt/readline/lib:$LDFLAGS" \
+  CPPFLAGS="-I/opt/homebrew/opt/readline/include:$CPPFLAGS" \
+  PKG_CONFIG_PATH="/opt/homebrew/opt/readline/lib/pkgconfig:$PKG_CONFIG_PATH" \
+  LDFLAGS="-L/opt/homebrew/opt/libffi/lib:$LDFLAGS" \
+  CPPFLAGS="-I/opt/homebrew/opt/libffi/include:$CPPFLAGS" \
+  PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH" \
+  optflags="-Wno-error=implicit-function-declaration" \
+  asdf install ruby $1
+}
+
+if declare -f "m1__$1" >/dev/null 2>&1; then
+  "m1__$@"
+else
+  echo "m1: command not found: $1" >&2
+  exit 1
+fi

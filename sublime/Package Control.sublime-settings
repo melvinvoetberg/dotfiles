@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Elixir",
+		"Git",
+		"GitGutter",
+		"nginx",
+		"Package Control",
+		"Pretty JSON",
+		"SideBarEnhancements",
+		"Theme - Monokai Pro",
+		"Vue Syntax Highlight"
+	],
+}

@@ -1,0 +1,6 @@
+[user]
+  name = Melvin Voetberg
+  email = melvin@voetberg.net
+
+[includeIf "gitdir:~/Work/"]
+  path = ~/Work/.gitconfig
