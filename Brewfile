@@ -2,6 +2,7 @@ brew "asdf"
 brew "coreutils"
 brew "direnv"
 brew "htop"
+brew "imagemagick"
 brew "jq"
 brew "mas"
 brew "mysql"
@@ -9,14 +10,17 @@ brew "neofetch"
 brew "openssl"
 brew "postgresql"
 brew "readline"
+brew "redis"
 brew "ruby-build"
 brew "shared-mime-info"
 brew "z"
 brew "zstd"
 
-# Casks
+# Taps
 tap "homebrew/cask"
+tap "homebrew/services"
 
+# Casks
 cask "bartender"
 cask "daisydisk"
 cask "docker"
