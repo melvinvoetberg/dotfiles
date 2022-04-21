@@ -1,5 +1,24 @@
 #!/bin/bash
 
+# Set Sublime Text as default application
+duti -s com.sublimetext.4 .css all
+duti -s com.sublimetext.4 .erb all
+duti -s com.sublimetext.4 .go all
+duti -s com.sublimetext.4 .js all
+duti -s com.sublimetext.4 .json all
+duti -s com.sublimetext.4 .md all
+duti -s com.sublimetext.4 .rb all
+duti -s com.sublimetext.4 .ru all
+duti -s com.sublimetext.4 .sh all
+duti -s com.sublimetext.4 .yml all
+duti -s com.sublimetext.4 .yaml all
+
+
+# Set VLC as default application
+duti -s org.videolan.vlc .avi all
+duti -s org.videolan.vlc .mkv all
+duti -s org.videolan.vlc .mp4 all
+
 # Disable Spotlight Shortcut
 echo "Disabling Spotlight Shortcut"
 /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist \

@@ -2,6 +2,7 @@ brew "asdf"
 brew "coreutils"
 brew "direnv"
 brew "docker-compose"
+brew "duti"
 brew "htop"
 brew "imagemagick"
 brew "jq"
@@ -47,6 +48,7 @@ cask "vlc"
 # MacOS App Store
 mas "1Blocker", id: 1365531024
 mas "1Password", id: 1333542190
+mas "BetterJSON for Safari", id: 1511935951
 mas "Bumpr", id: 1166066070
 mas "Dark Reader for Safari", id: 1438243180
 mas "MeetingBar", id: 1532419400
