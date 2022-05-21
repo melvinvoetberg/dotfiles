@@ -18,6 +18,7 @@ duti -s com.sublimetext.4 .yaml all
 duti -s org.videolan.vlc .avi all
 duti -s org.videolan.vlc .mkv all
 duti -s org.videolan.vlc .mp4 all
+duti -s org.videolan.vlc .webm all
 
 # Disable Spotlight Shortcut
 echo "Disabling Spotlight Shortcut"

@@ -1,8 +1,14 @@
+# Taps
+tap "homebrew/cask"
+tap "homebrew/services"
+tap "teamookla/speedtest"
+
 brew "asdf"
 brew "coreutils"
 brew "direnv"
 brew "docker-compose"
 brew "duti"
+brew "ffmpeg"
 brew "htop"
 brew "imagemagick"
 brew "jq"
@@ -15,17 +21,16 @@ brew "readline"
 brew "redis"
 brew "ruby-build"
 brew "shared-mime-info"
+brew "speedtest"
 brew "wget"
 brew "yt-dlp"
 brew "z"
 brew "zstd"
 
-# Taps
-tap "homebrew/cask"
-tap "homebrew/services"
-
 # Casks
+cask "android-studio"
 cask "another-redis-desktop-manager"
+cask "asana"
 cask "bartender"
 cask "daisydisk"
 cask "dash"
