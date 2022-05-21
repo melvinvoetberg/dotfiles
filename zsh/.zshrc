@@ -32,6 +32,9 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 # direnv
 eval "$(direnv hook zsh)"
 
+# ip
+alias ip="curl -s https://api.melvin.pizza/v1/ip | jq"
+
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
