@@ -69,6 +69,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   ln -fns "$(pwd)/sublime/Package Control.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Package Control.sublime-settings"
   ln -fns "$(pwd)/sublime/Preferences.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+  mkdir -p "$HOME/Library/Application Support/Sublime Text/Packages/User"
   ln -fns "$(pwd)/sublime/Package Control.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings"
   ln -fns "$(pwd)/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
 fi
