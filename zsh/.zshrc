@@ -21,7 +21,14 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+arch="$(uname -m)"
+if [[ "$arch" = x86_64* ]]; then
+  if [[ "$(uname -a)" = *ARM64* ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  else
+    eval "$(/usr/local/Homebrew/bin/brew shellenv)"
+  fi
+fi
 
 # Binaries
 export PATH="$HOME/.bin:$PATH"
