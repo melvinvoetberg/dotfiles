@@ -28,6 +28,8 @@ if [[ "$arch" = x86_64* ]]; then
   else
     eval "$(/usr/local/Homebrew/bin/brew shellenv)"
   fi
+elif [[ "$arch" = arm64* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Binaries
