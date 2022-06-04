@@ -21,15 +21,19 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Homebrew
-arch="$(uname -m)"
-if [[ "$arch" = x86_64* ]]; then
-  if [[ "$(uname -a)" = *ARM64* ]]; then
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+else
+  arch="$(uname -m)"
+  if [[ "$arch" = x86_64* ]]; then
+    if [[ "$(uname -a)" = *ARM64* ]]; then
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    else
+      eval "$(/usr/local/Homebrew/bin/brew shellenv)"
+    fi
+  elif [[ "$arch" = arm64* ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
-  else
-    eval "$(/usr/local/Homebrew/bin/brew shellenv)"
   fi
-elif [[ "$arch" = arm64* ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Binaries
