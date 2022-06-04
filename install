@@ -1,7 +1,11 @@
 #!/bin/bash
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   echo "Linux detected"
-  apt-get update && apt-get upgrade -y && apt-get install curl git ruby wget
+  sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install build-essential curl gcc git wget zsh -y
+
+  if ! [[ "$SHELL" == "/bin/zsh" ]]; then
+    chsh -s /bin/zsh
+  fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   echo "MacOS detected"
 
@@ -24,7 +28,11 @@ fi
 which -s brew
 if [[ $? != 0 ]] ; then
   echo "Installing Homebrew"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+  fi
 fi
 
 # Install Homebrew Software
