@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Dart",
 		"Elixir",
 		"Git",
 		"GitGutter",
@@ -12,6 +13,7 @@
 		"Package Control",
 		"Pretty JSON",
 		"SideBarEnhancements",
+		"Terraform",
 		"Theme - Monokai Pro",
 		"Vue Syntax Highlight",
 		"WakaTime",
