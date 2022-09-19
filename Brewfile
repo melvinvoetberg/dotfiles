@@ -15,7 +15,7 @@ brew "mas"
 brew "mysql"
 brew "neofetch"
 brew "openssl@1.1"
-brew "postgresql"
+brew "postgresql@14"
 brew "readline"
 brew "redis"
 brew "ruby-build"
@@ -27,6 +27,7 @@ brew "z"
 brew "zstd"
 
 # Casks
+cask "1password"
 cask "android-studio"
 cask "another-redis-desktop-manager"
 cask "asana"
@@ -57,7 +58,6 @@ cask "vlc"
 
 # MacOS App Store
 mas "1Blocker", id: 1365531024
-mas "1Password", id: 1333542190
 mas "BetterJSON for Safari", id: 1511935951
 mas "Bumpr", id: 1166066070
 mas "Dark Reader for Safari", id: 1438243180
