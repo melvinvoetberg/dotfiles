@@ -72,6 +72,9 @@ ln -fns "$(pwd)/git/.gitconfig" "$HOME/.gitconfig"
 ln -fns "$(pwd)/git/.gitignore_global" "$HOME/.gitignore_global"
 ln -fns "$(pwd)/git/.gitattributes_global" "$HOME/.gitattributes_global"
 
+# GPG
+ln -fns "$(pwd)/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+
 ## Sublime Text
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   ln -fns "$(pwd)/sublime/Package Control.sublime-settings" "$HOME/.config/sublime-text/Packages/User/Package Control.sublime-settings"

@@ -6,9 +6,11 @@
 	"installed_packages":
 	[
 		"Dart",
+		"Dockerfile Syntax Highlighting",
 		"Elixir",
 		"Git",
 		"GitGutter",
+		"MDX Syntax Highlighting",
 		"nginx",
 		"Package Control",
 		"Pretty JSON",
