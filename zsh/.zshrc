@@ -45,6 +45,13 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 # direnv
 eval "$(direnv hook zsh)"
 
+# GPG
+if ! ps -U "$USER" -o pid,ucomm | grep -q "gpg-agent"; then
+  eval "$(gpg-agent --daemon)"
+fi
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
+
 # ip
 alias ip="curl -s https://api.melvin.pizza/v1/ip | jq"
 
@@ -57,3 +64,5 @@ export LC_ALL=en_US.UTF-8
 
 # z
 source $(brew --prefix z)/etc/profile.d/z.sh
+export PATH=$PATH:/Users/melvin/.spicetify
+
