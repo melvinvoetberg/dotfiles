@@ -50,7 +50,10 @@ if ! ps -U "$USER" -o pid,ucomm | grep -q "gpg-agent"; then
   eval "$(gpg-agent --daemon)"
 fi
 export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
+
+if [[ "$SSH_AUTH_SOCK" != "/tmp/ssh-"* ]]; then
+  export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
+fi
 
 # ip
 alias ip="curl -s https://api.melvin.pizza/v1/ip | jq"
