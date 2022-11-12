@@ -67,3 +67,4 @@ mas "Slack", id: 803453959
 mas "SnippetsLab", id: 1006087419
 mas "Speedtest", id: 1153157709
 mas "WireGuard", id: 1451685025
+mas "Yubico Authenticator", id: 1497506650
