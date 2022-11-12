@@ -53,6 +53,7 @@ cask "spotify"
 cask "sublime-merge"
 cask "sublime-text"
 cask "tableplus"
+cask "tailscale"
 cask "transmit"
 cask "vlc"
 
