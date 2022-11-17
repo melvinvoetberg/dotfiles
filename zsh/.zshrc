@@ -68,4 +68,3 @@ export LC_ALL=en_US.UTF-8
 # z
 source $(brew --prefix z)/etc/profile.d/z.sh
 export PATH=$PATH:/Users/melvin/.spicetify
-
