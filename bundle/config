@@ -1,1 +1,2 @@
+BUNDLE_BUILD__GRPC: "--with-ldflags="-Wl,-undefined,dynamic_lookup""
 BUNDLE_BUILD__MYSQL2: "--with-opt-dir=/opt/homebrew/opt/openssl@1.1:/opt/homebrew/opt/zstd"
