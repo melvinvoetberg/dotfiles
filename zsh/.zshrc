@@ -45,6 +45,15 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 # direnv
 eval "$(direnv hook zsh)"
 
+# git extensions
+function git() {
+  if [[ $@ == "count" ]]; then
+    git ls-files | while read f; do git blame --line-porcelain $f | grep '^author '; done | sort -f | uniq -ic | sort -n
+  else
+    command git "$@"
+  fi
+}
+
 # GPG
 if ! ps -U "$USER" -o pid,ucomm | grep -q "gpg-agent"; then
   eval "$(gpg-agent --daemon)"
