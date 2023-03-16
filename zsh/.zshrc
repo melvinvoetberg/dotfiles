@@ -67,6 +67,11 @@ fi
 # ip
 alias ip="curl -s https://api.melvin.pizza/v1/ip | jq"
 
+# kubernetes
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+alias k=kubectl
+complete -o default -F __start_kubectl k
+
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
