@@ -1,3 +1,3 @@
 ---
 BUNDLE_BUILD__GRPC: "--with-ldflags=\"-Wl,-undefined,dynamic_lookup\""
-BUNDLE_BUILD__MYSQL2: "--with-opt-dir=/opt/homebrew/opt/openssl@1.1:/opt/homebrew/opt/zstd"
+BUNDLE_BUILD__MYSQL2: "--with-mysql-lib=/opt/homebrew/opt/mysql/lib --with-mysql-dir=/opt/homebrew/opt/mysql --with-mysql-config=/opt/homebrew/opt/mysql/bin/mysql_config \ --with-mysql-include=/opt/homebrew/opt/mysql/include --with-ldflags=-L/opt/homebrew/opt/zlib/lib --with-opt-dir=/opt/homebrew/opt/openssl@1.1:/opt/homebrew/opt/zstd"
