@@ -16,6 +16,7 @@ plugins=(
   rails
   ruby
   sublime
+  zsh-wakatime
 )
 
 source $ZSH/oh-my-zsh.sh

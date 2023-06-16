@@ -34,46 +34,56 @@ brew "z"
 brew "zstd"
 
 # Casks
-cask "1password"
+cask "aerial"
 cask "alacritty"
 cask "android-studio"
 cask "bartender"
 cask "daisydisk"
-cask "dash"
 cask "docker"
 cask "dropshare"
-cask "element"
+cask "figma"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "gpg-suite"
+cask "intellij-idea-ce"
 cask "iterm2"
-cask "linear-linear"
 cask "miniconda"
+cask "miro"
 cask "notion"
+cask "numi"
 cask "obsidian"
 cask "optimage"
-cask "paw"
 cask "postgres-unofficial"
 cask "postico"
 cask "protonvpn"
+cask "rapidapi"
 cask "raycast"
-cask "sketch"
+cask "redisinsight"
+cask "signal"
 cask "spotify"
 cask "sublime-merge"
 cask "sublime-text"
-cask "tableplus"
 cask "tailscale"
 cask "transmit"
 cask "vlc"
+cask "whatsapp"
 
 # MacOS App Store
 mas "1Blocker", id: 1365531024
-mas "BetterJSON for Safari", id: 1511935951
+mas "BetterJSON", id: 1511935951
 mas "Bumpr", id: 1166066070
 mas "Dark Reader for Safari", id: 1438243180
+mas "Eat the Shorts", id: 1668012393
 mas "MeetingBar", id: 1532419400
+mas "Notion Web Clipper", id: 1559269364
+mas "PingDoctor", id: 1350044974
+mas "Pixelmator Pro", id: 1289583905
+mas "Sequel Ace", id: 1518036000
 mas "Slack", id: 803453959
 mas "SnippetsLab", id: 1006087419
 mas "Speedtest", id: 1153157709
+mas "StopTheMadness", id: 1376402589
+mas "Structured - Planner & Agenda", id: 1499198946
+mas "WiFi Explorer", id: 494803304
 mas "WireGuard", id: 1451685025
 mas "Yubico Authenticator", id: 1497506650
