@@ -35,17 +35,17 @@ brew "zstd"
 
 # Casks
 cask "aerial"
-cask "alacritty"
 cask "android-studio"
 cask "bartender"
+cask "cyberduck"
 cask "daisydisk"
 cask "docker"
 cask "dropshare"
+cask "element"
 cask "figma"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "gpg-suite"
-cask "intellij-idea-ce"
 cask "iterm2"
 cask "miniconda"
 cask "miro"
@@ -59,14 +59,11 @@ cask "protonvpn"
 cask "rapidapi"
 cask "raycast"
 cask "redisinsight"
-cask "signal"
 cask "spotify"
 cask "sublime-merge"
 cask "sublime-text"
 cask "tailscale"
-cask "transmit"
 cask "vlc"
-cask "whatsapp"
 
 # MacOS App Store
 mas "1Blocker", id: 1365531024
@@ -74,7 +71,6 @@ mas "BetterJSON", id: 1511935951
 mas "Bumpr", id: 1166066070
 mas "Dark Reader for Safari", id: 1438243180
 mas "Eat the Shorts", id: 1668012393
-mas "MeetingBar", id: 1532419400
 mas "Notion Web Clipper", id: 1559269364
 mas "PingDoctor", id: 1350044974
 mas "Pixelmator Pro", id: 1289583905
