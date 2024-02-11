@@ -85,6 +85,13 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   ln -fns "$(pwd)/sublime/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
 fi
 
+## Zed
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  mkdir -p "$HOME/.config/zed"
+  ln -fns "$(pwd)/zed/keymap.json" "$HOME/.config/zed/keymap.json"
+  ln -fns "$(pwd)/zed/settings.json" "$HOME/.config/zed/settings.json"
+fi
+
 ## Zsh
 ln -fns "$(pwd)/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 ln -fns "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"

@@ -1,0 +1,35 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "theme": "Andromeda",
+  "tab_size": 2,
+  "base_keymap": "SublimeText",
+  "buffer_font_family": "Source Code Pro",
+  "buffer_font_size": 16,
+  "buffer_font_features": {
+    "salt": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 16,
+  "terminal": {
+    "font_family": "MesloLGS NF"
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "journal": {
+    "hour_format": "hour24"
+  }
+}
