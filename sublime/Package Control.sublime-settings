@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
 		"Dart",
 		"Dockerfile Syntax Highlighting",
 		"Elixir",

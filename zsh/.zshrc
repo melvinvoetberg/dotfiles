@@ -40,6 +40,10 @@ fi
 # Binaries
 export PATH="$HOME/.bin:$PATH"
 
+# android
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator"
+
 # asdf
 source $(brew --prefix asdf)/libexec/asdf.sh
 
@@ -80,6 +84,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# Sublime Text
+export REACT_EDITOR=subl
+
 # z
 source $(brew --prefix z)/etc/profile.d/z.sh
-export PATH=$PATH:/Users/melvin/.spicetify

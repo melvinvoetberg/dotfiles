@@ -3,6 +3,8 @@
   "ensure_newline_at_eof_on_save": true,
   "folder_exclude_patterns":
   [
+    "android",
+    "ios",
     ".git",
     ".hg",
     ".svn",
@@ -13,15 +15,17 @@
     "node_modules",
     "_build",
     "deps",
-    "coverage",
-    "public/packs"
+    "public/packs",
+    ".jest-cache",
+    ".next"
   ],
   "font_face": "Source Code Pro",
-  "font_size": 16,
+  "font_size": 15,
   "highlight_line": true,
   "ignored_packages":
   [
     "Dart",
+    "Package Control",
     "Vintage",
   ],
   "rulers":
@@ -35,4 +39,5 @@
   "theme": "Monokai Pro (Filter Spectrum).sublime-theme",
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true,
+  "index_files": true,
 }
