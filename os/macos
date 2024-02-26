@@ -2,11 +2,23 @@
 
 # Set Keka as default application
 duti -s com.aone.keka .7z all
+duti -s com.aone.keka .aar all
+duti -s com.aone.keka .ace all
+duti -s com.aone.keka .br all
+duti -s com.aone.keka .bz all
 duti -s com.aone.keka .bz2 all
+duti -s com.aone.keka .bzip all
+suti -s com.aone.keka .bzip2 all
 duti -s com.aone.keka .gz all
+duti -s com.aone.keka .gzip all
+duti -s com.aone.keka .lrz all
+duti -s com.aone.keka .lz all
 duti -s com.aone.keka .rar all
 duti -s com.aone.keka .tar all
+duti -s com.aone.keka .wim all
+duti -s com.aone.keka .xz all
 duti -s com.aone.keka .zip all
+duti -s com.aone.keka .zst all
 
 # Set VLC as default application
 duti -s org.videolan.vlc .avi all
