@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Set Keka as default application
+duti -s com.aone.keka .7z all
+duti -s com.aone.keka .bz2 all
+duti -s com.aone.keka .gz all
+duti -s com.aone.keka .rar all
+duti -s com.aone.keka .tar all
+duti -s com.aone.keka .zip all
+
+# Set VLC as default application
+duti -s org.videolan.vlc .avi all
+duti -s org.videolan.vlc .mkv all
+duti -s org.videolan.vlc .mp4 all
+duti -s org.videolan.vlc .webm all
+
 # Set Zed as default application
 duti -s dev.zed.Zed .css all
 duti -s dev.zed.Zed .erb all
@@ -15,12 +29,6 @@ duti -s dev.zed.Zed .tsx all
 duti -s dev.zed.Zed .yml all
 duti -s dev.zed.Zed .yaml all
 duti -s dev.zed.Zed .xml all
-
-# Set VLC as default application
-duti -s org.videolan.vlc .avi all
-duti -s org.videolan.vlc .mkv all
-duti -s org.videolan.vlc .mp4 all
-duti -s org.videolan.vlc .webm all
 
 # Disable Spotlight Shortcut
 echo "Disabling Spotlight Shortcut"
