@@ -8,7 +8,7 @@ duti -s com.aone.keka .br all
 duti -s com.aone.keka .bz all
 duti -s com.aone.keka .bz2 all
 duti -s com.aone.keka .bzip all
-suti -s com.aone.keka .bzip2 all
+duti -s com.aone.keka .bzip2 all
 duti -s com.aone.keka .gz all
 duti -s com.aone.keka .gzip all
 duti -s com.aone.keka .lrz all
