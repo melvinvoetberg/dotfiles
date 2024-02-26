@@ -38,7 +38,6 @@ cask "anytype"
 cask "android-studio"
 cask "bartender"
 cask "cyberduck"
-cask "daisydisk"
 cask "docker"
 cask "dropshare"
 cask "figma"
@@ -72,8 +71,10 @@ mas "BetterJSON", id: 1511935951
 mas "Bitwarden", id: 1352778147
 mas "Bumpr", id: 1166066070
 mas "Compressor", id: 424390742
+mas "DaisyDisk", id: 411643860
 mas "Dark Reader for Safari", id: 1438243180
 mas "Eat the Shorts", id: 1668012393
+mas "Keka", id: 470158793
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Patterns", id: 429449079
 mas "PingDoctor", id: 1350044974
