@@ -34,6 +34,7 @@ brew "z"
 brew "zstd"
 
 # Casks
+cask "alt-tab"
 cask "anytype"
 cask "android-studio"
 cask "bartender"
