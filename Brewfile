@@ -38,6 +38,8 @@ cask "alt-tab"
 cask "anytype"
 cask "android-studio"
 cask "bartender"
+cask "betterdisplay"
+cask "clop"
 cask "cyberduck"
 cask "docker"
 cask "dropshare"
@@ -50,7 +52,6 @@ cask "iterm2"
 cask "miniconda"
 cask "notion"
 cask "numi"
-cask "optimage"
 cask "postgres-unofficial"
 cask "postico"
 cask "protonvpn"
@@ -79,11 +80,10 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Patterns", id: 429449079
 mas "PingDoctor", id: 1350044974
 mas "Pixelmator Pro", id: 1289583905
-mas "Sequel Ace", id: 1518036000
 mas "Slack", id: 803453959
 mas "SnippetsLab", id: 1006087419
 mas "Speedtest", id: 1153157709
-mas "StopTheMadness", id: 1376402589
+mas "StopTheMadness Pro", id: 6471380298
 mas "Structured", id: 1499198946
 mas "Things", id: 904280696
 mas "WhatsApp", id: 310633997
