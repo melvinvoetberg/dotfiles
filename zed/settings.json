@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Andromeda",
+  "theme": "Zedokai Darker (Filter Spectrum)",
   "tab_size": 2,
   "base_keymap": "SublimeText",
   "buffer_font_family": "Source Code Pro",
