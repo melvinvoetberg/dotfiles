@@ -7,6 +7,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
   "theme": "Zedokai Darker (Filter Spectrum)",
   "tab_size": 2,
   "base_keymap": "SublimeText",
@@ -31,5 +38,10 @@
   },
   "journal": {
     "hour_format": "hour24"
+  },
+  "languages": {
+    "Rust": {
+      "tab_size": 4
+    }
   }
 }
