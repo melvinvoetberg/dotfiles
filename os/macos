@@ -20,11 +20,13 @@ duti -s com.aone.keka .xz all
 duti -s com.aone.keka .zip all
 duti -s com.aone.keka .zst all
 
-# Set VLC as default application
-duti -s org.videolan.vlc .avi all
-duti -s org.videolan.vlc .mkv all
-duti -s org.videolan.vlc .mp4 all
-duti -s org.videolan.vlc .webm all
+# Set IINA as default application
+duti -s com.colliderli.iina .avi all
+duti -s com.colliderli.iina .mkv all
+duti -s com.colliderli.iina .mov all
+duti -s com.colliderli.iina .mp3 all
+duti -s com.colliderli.iina .mp4 all
+duti -s com.colliderli.iina .webm all
 
 # Set Zed as default application
 duti -s dev.zed.Zed .css all
@@ -52,3 +54,10 @@ echo "Disabling Spotlight Shortcut"
   -c "Add :AppleSymbolicHotKeys:64:value:parameters: integer 49" \
   -c "Add :AppleSymbolicHotKeys:64:value:parameters: integer 1048576" \
   -c "Add :AppleSymbolicHotKeys:64:type string standard"
+
+# Speed up animations
+echo "Speed up animations"
+defaults write com.apple.dock expose-animation-duration -float 0.01
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.01
+defaults write com.apple.dock autohide-time-modifier -float 0.01
+killall Dock

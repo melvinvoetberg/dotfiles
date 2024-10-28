@@ -70,7 +70,8 @@ if [[ "$SSH_AUTH_SOCK" != "/tmp/ssh-"* ]]; then
 fi
 
 # ip
-alias ip="curl -s https://api.melvin.pizza/v1/ip | jq"
+alias ip="curl -s -4 https://api.melvin.pizza/v1/ip | jq"
+alias ip6="curl -s -6 https://api.melvin.pizza/v1/ip | jq"
 
 # kubernetes
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
